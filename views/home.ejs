@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skribble</title>
+    <link rel="stylesheet" href="/styles/home.css">
+    
+</head>
+<body>
+    <div class="nav" id = "nav">
+        Welcome to Skribble
+    </div>
+
+    <div class="container">
+        <div class="join options" onclick="joinroom()">
+            Join A Room
+        </div>
+
+        <div class="create options" >
+            <a href="/createroom">Create A Room</a>
+        </div>
+    </div>
+
+    <script>
+        function joinroom (){
+            let x = window.prompt ("Enter Room Number: ");
+            if (x != ""){
+                    // console.log (x);
+                    let passer = {room : x};
+
+                    let p = {
+                    method : 'post',
+                    headers : {
+                        'Content-Type' : 'application/json'
+                    },
+                    body : JSON.stringify(passer)
+                };
+
+                fetch ('/checkroom',p).then((res)=>{
+                    // console.log (res);
+                    return res.json();
+                }).then ((data)=>{
+                    if (data.err){
+                        if (data.err.errno == 1064){
+                            document.getElementById('errmsg').innerText = 'Invalid Syntax';
+                        }
+
+                    }
+                    else{
+                        if (data.status){
+                            let path = "/joinroom?room=" + x;
+                            window.location.href = path;
+                        }
+
+                        else{
+                            document.getElementById('nav').innerText = "Error Joining the Room !";
+                        }
+
+                    }
+        // setter(data);
+                })
+
+            }
+
+            console.log (x);
+        }
+    </script>
+
+    
+</body>
+</html>

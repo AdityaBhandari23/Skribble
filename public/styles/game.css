@@ -1,0 +1,297 @@
+#canva {
+    border : 3px solid rgb(255, 0, 195);
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 9px;
+}
+
+body{
+    background-image: url('https://skribbl.io/img/background.png');
+    margin: 0px;
+}
+
+a{
+    color: inherit;
+}
+
+.container{
+    margin-top: 70px;
+    /* border : 2px solid black; */
+    justify-content: space-around;
+}
+
+.box{
+    /* border : 2px solid yellow; */
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-evenly;
+}
+
+.finchats{
+    width: 25%;
+    height: 500px;
+}
+
+.chats{
+    border : 2px solid white;
+    height: 500px;
+    background-color: rgba(12, 218, 129, 0.5);
+    backdrop-filter: blur(1px);
+    overflow: scroll;
+    scroll-behavior: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    scrollbar-width: none;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.words{
+    /* border : 2px solid greenyellow; */
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: black;
+    background-color:cyan;
+    width: 45%;
+    margin: auto;
+    margin-bottom: 19px;
+    padding: 10px;
+    border-radius: 16px;
+    font-weight: bold;
+    box-shadow: 0px 0px 4px 1px yellow;
+}
+
+.cb{
+    display: flex;
+    padding: 3px 15px;
+    /* border : 2px solid red; */
+    box-shadow: 0px 0px 3px 1px black;
+    color: rgb(0, 0, 0);
+    margin : 6px;
+    background-color: rgb(6, 224, 236);
+    border-radius: 6px;
+}
+
+
+#mes{
+    padding: 12px;
+    width: 100%;
+    margin: 6px 0px;
+    border: 3px solid black;
+    background-color: bisque;
+    border-radius: 12px;
+}
+
+.typing {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.typing img{
+    background-color: rgb(196, 255, 197);
+    border-radius: 8px;
+    /* border : 2px solid red; */
+}
+
+#notification {
+    /* border : 2px solid red;  */
+    box-shadow: 0px 0px 5px 1px wheat;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: rgb(17, 22, 167);
+    width: 30%;
+}
+
+#color{
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.ca{
+    display: flex;
+    flex-direction: column;
+}
+
+#clear{
+    /* border : 2px solid red; */
+    width: 30%;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 15px;
+    margin: 2px;
+    background-color: orange;
+    box-shadow: 0px 0px 3px 1px wheat;
+
+    transition: background-color 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+#clear:hover{
+    background-color: rgb(255, 181, 44);
+    cursor: pointer;
+}
+
+.nav{
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+}
+
+.score{
+    /* border : 2px solid red; */
+    padding: 12px;
+    color: white;
+    background-color: rgb(22, 22, 190);
+    font-size: 18px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 1px white;
+    width: 15%;
+    text-align: center;
+}
+
+.tohide{
+    display: none;
+}
+
+.ab{
+    display: flex;
+}
+
+.scoreCard{
+    /* border : 2px solid red; */
+    margin: 6px;
+    height: 100%;
+    border-radius: 16px;
+    padding: 3px;
+    background-color: rgb(129, 212, 51);
+    box-shadow: 0px 0px 5px 1px rgb(4, 249, 8);
+}
+
+.scoreCard h1{
+    color: rgb(207, 60, 6);
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+}
+
+.host{
+    /* border : 2px solid black; */
+    padding: 4px;
+    font-family: 'Righteous', cursive;
+    color: rgb(18, 10, 106);
+}
+
+
+.selectionOption{
+    position: absolute;
+    border : 2px solid red;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+    
+}
+
+.selectionOption h2{
+    /* border: 2px solid red; */
+    padding: 15px;
+    border-radius: 19px;
+    background-color: green;
+    color : orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0px 0px 5px 1px red;
+}
+
+.selectionBox{
+    /* border : 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.selectionBox p{
+    padding: 10px 45px;
+    /* border: 2px solid red; */
+    margin: 7px;
+    border-radius: 12px;
+    background-color: red;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px black;
+
+    transition: background-color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.selectionBox p:hover{
+    background-color: rgb(138, 26, 26);
+}
+
+
+
+
+.winner{
+    position: absolute;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(7px);
+    font-family: lobster;
+    font-size: 55px;
+    display: none;
+
+    
+}
+
+#playagain{
+    cursor: pointer;
+}
+
+
+.winner h1{
+    -webkit-text-fill-color: transparent;
+    /* -webkit-text-stroke: 0.1px rgb(12, 223, 255); */
+    background-clip: border-box;
+    background-image: linear-gradient(to right, hsl(127, 90%, 48%) 0, hsl(62, 100%, 47%) 10%, hsl(236, 93%, 21%) 20%);
+    -webkit-background-clip: text;
+
+    animation-name: text_move;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes text_move {
+    0%{
+        background-position-x: 0px;
+    }
+
+    100%{
+        background-position-x: 840px;
+    }
+}
+
+a{
+    color: inherit;
+    color: brown;
+}

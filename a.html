@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <title>Skribble</title>
+    <link rel="stylesheet" href="./public/styles/game.css">
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+
+</head>
+<body>
+    <div class="nav">
+        <div id="notification">
+            notification
+        </div>
+
+        <div id="room" class="score">
+            Room Number : <%=room%>
+        </div>
+
+        <div class="score">
+            Time :  <span id="timer">0 Seconds</span>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <div class="words" id = "words">
+            Skribble By &#174;
+        </div>
+        
+        <div class="box">
+            <div class="ab">
+                <div class="scoreCard">
+                    <h1><u>Scores</u></h1>
+                    <div class="sbox">
+                        <div class="host" id = "host_score">
+                            <h3>Host : 00</h3>
+                        </div>
+                        <div class="host" id = "user_score">
+                            <h3>User : 00</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="ca">
+                    <canvas id = "canva" height="500px" width="500px">
+                        Canvas
+                    </canvas>
+    
+                    <input type="color" name="color" id="color" onchange="setcolor(this)">
+                    <button id="clear" onclick="clearcanvas()">Clear</button>
+                </div>
+
+            </div>
+            <div class="finchats">
+                <div class="chats" id = "chats">                    
+                </div>
+
+                <div class="typing">
+                    <input required type="text" name="message" id="mes" placeholder="Type Message Here">
+                    <img src="https://static.thenounproject.com/png/1887603-200.png" alt="" height="40px" id = "sendkey" onclick="sendmessage()">
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="selectionOption" id = "selectionOptionid">
+        <h2>Select Among Them</h2>
+        <div class="selectionBox">
+            <p id="o1" onclick="selection_clicked(this)">Bull</p>
+            <p id="o2" onclick="selection_clicked(this)">Cat</p>
+            <p id="o3" onclick="selection_clicked(this)">Cow</p>
+        </div>
+    </div>
+
+
+
+    <div class="winner">
+        <h1>
+            Host Won the Game
+        </h1>
+
+        <a href="/">Go to Home Page</a>
+    </div>
+
+    <input type="text" class="tohide" id = "via" name="via" value = <%=value%>>
+    <input type="text" class = "tohide" id = "sid" name="id" value="">
+    <input type="text" class = "tohide" id = "actualroom" name="actualroom" value="">
+    <input type="text" class = "tohide" id = "roomNo" name="roomNo" value="<%=room%>">
+    <input type="text" name="word" id="wordhide" class="tohide" value="">
+
+    <script>
+        document.getElementById('mes').addEventListener("keypress",(e)=>{
+            if (e.keyCode == 13){
+                document.getElementById('sendkey').click();
+            }
+        })
+    </script>
+    <script src="./public/js/homemain.js"></script>
+    <script src="./public/js/canva.js"></script>
+</body>
+</html>
