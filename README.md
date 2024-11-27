@@ -33,62 +33,58 @@ Before you begin, ensure you have the following software installed:
 ### Installation
 
 1. **Clone the repository**:
-
-   ```bash
    git clone https://github.com/your-username/skribble.git
    
-2. Navigate to the project directory:
+2. **Navigate to the project directory:**
 cd skribble
 
-4. Install dependencies:
+3. **Install dependencies:**
 npm install
 
-4.Run the application:
+4. **Run the application:**
 You can start the server using nodemon (it will automatically restart on changes) or node:
 npm start
 The application will be accessible at http://localhost:3002.
 
 
-File Structure
+**File Structure**
 Here is a brief description of the important files and directories in the project:
 
-php
-Copy code
-.
-├── public/                # Static files (CSS, JavaScript, images)
-│   ├── styles/            # Styles for the game
-│   └── js/                # JavaScript files for game functionality
-├── views/                 # EJS templates for rendering HTML
-│   └── game.ejs           # The main game page template
-├── index.js               # Main server file for the backend
-├── package-lock.json   
-├── package.json           # Project dependencies and scripts
-└── README.md              # Project documentation
-How the Game Works
-Room Creation: Users can create or join a room by visiting the game page and entering a room number.
-Drawing: Once in the room, a user is selected to draw a word from a list of predefined options. They draw it on the canvas, and others try to guess the word.
-Guessing: Players type in their guesses in the chat, and the first player to guess correctly wins points.
-Timer: Each round has a countdown timer, which can be controlled by the host.
-Rounds: The game proceeds in rounds. At the end of each round, the scores are updated and a new word is selected for drawing.
+**├── public/                # Static files (CSS, JavaScript, images)**
 
-Usage
-Create Room: Go to the /createroom route to create a new game room.
-Join Room: Go to /joinroom?room=<room_number> to join an existing room.
-Start Game: Once players are in the room, the host can start the game by triggering the startgame event.
-Play the Game: Players draw and guess words, with scores being updated in real-time.
+**│   ├── styles/            # Styles for the game**
 
-Scripts
-npm start: Start the game server using nodemon (recommended for development).
-npm run build: (If implemented) Compile assets for production.
+**│   └── js/                # JavaScript files for game functionality**
 
-Contributions
-If you'd like to contribute to the project, feel free to fork the repository, make changes, and submit a pull request. All contributions are welcome!
+**├── views/                 # EJS templates for rendering HTML**
 
-Reporting Issues
-If you encounter any issues or bugs, please open an issue on GitHub.
+**│   └── game.ejs           # The main game page template**
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+**├── index.js               # Main server file for the backend**
+**├── package-lock.json   **
+
+**├── package.json           # Project dependencies and scripts**
+
+**└── README.md              # Project documentation**
+
+## How the Game Works
+**Room Creation:** Users can create or join a room by visiting the game page and entering a room number.
+
+**Drawing:** Once in the room, a user is selected to draw a word from a list of predefined options. They draw it on the canvas, and others try to guess the word.
+
+**Guessing:** Players type in their guesses in the chat, and the first player to guess correctly wins points.
+
+**Timer:** Each round has a countdown timer, which can be controlled by the host.
+
+**Rounds:** The game proceeds in rounds. At the end of each round, the scores are updated and a new word is selected for drawing.
+
+
+## Usage
+**Create Room:** Go to the /createroom route to create a new game room.
+**Join Room:** Go to /joinroom?room=<room_number> to join an existing room.
+**Start Game:** Once players are in the room, the host can start the game by triggering the startgame event.
+**Play the Game:** Players draw and guess words, with scores being updated in real-time.
+
 
 
 
