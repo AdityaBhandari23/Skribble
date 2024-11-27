@@ -1,6 +1,10 @@
 # Skribble - Multiplayer Drawing Game
 
 Skribble is a simple multiplayer online drawing and guessing game, inspired by "Skribbl.io". Players join a room, take turns drawing a word, while others try to guess the word. This game uses WebSockets for real-time interaction and drawing.
+# Deployed link
+Please wait for 2-3 minutes if the link doesn't open.
+
+https://skribble-0k6w.onrender.com/
 
 ## Features
 
@@ -61,7 +65,7 @@ Here is a brief description of the important files and directories in the projec
 **│   └── game.ejs           # The main game page template**
 
 **├── index.js               # Main server file for the backend**
-**├── package-lock.json   **
+**├── package-lock.json      # Dependencies and package versions**
 
 **├── package.json           # Project dependencies and scripts**
 
@@ -81,9 +85,14 @@ Here is a brief description of the important files and directories in the projec
 
 ## Usage
 **Create Room:** Go to the /createroom route to create a new game room.
+
 **Join Room:** Go to /joinroom?room=<room_number> to join an existing room.
+
 **Start Game:** Once players are in the room, the host can start the game by triggering the startgame event.
+
 **Play the Game:** Players draw and guess words, with scores being updated in real-time.
+
+
 
 
 
